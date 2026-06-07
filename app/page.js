@@ -1090,13 +1090,13 @@ export default function Home() {
       );
     }
 
-    return null;
+    return null; 
   };
 
   return (
     <main className="min-h-screen">
       <section className="relative overflow-hidden border-b border-white/60 bg-white/80 backdrop-blur-xl">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,_rgba(37,99,235,0.18),_transparent_35%),radial-gradient(circle_at_top_right,_rgba(147,51,234,0.14),_transparent_35%)]" />
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(37,99,235,0.18),transparent_35%),radial-gradient(circle_at_top_right,rgba(147,51,234,0.14),transparent_35%)]" />
 
         <div className="mx-auto grid max-w-7xl gap-8 px-6 py-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
           <div>
@@ -1130,7 +1130,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="rounded-[2rem] border border-white bg-white/90 p-6 shadow-2xl shadow-blue-100">
+          <div className="rounded-4xl border border-white bg-white/90 p-6 shadow-2xl shadow-blue-100">
             <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-600 text-white shadow-lg shadow-blue-200">
               <Upload className="h-7 w-7" />
             </div>
@@ -1180,10 +1180,10 @@ export default function Home() {
           <EmptyState />
         ) : (
           <>
-            <div className="mb-6 rounded-[2rem] border border-white bg-white/90 p-5 shadow-xl shadow-slate-200/70 backdrop-blur">
+            <div className="mb-6 rounded-4xl border border-white bg-white/90 p-5 shadow-xl shadow-slate-200/70 backdrop-blur">
               <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
                 <div className="flex items-center gap-4">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-600 text-white shadow-lg shadow-blue-200">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-linear-to-br from-blue-600 to-indigo-600 text-white shadow-lg shadow-blue-200">
                     <FileSpreadsheet className="h-7 w-7" />
                   </div>
 
@@ -1253,7 +1253,7 @@ export default function Home() {
                 <aside className="space-y-6 lg:sticky lg:top-6 lg:self-start">
                   <DetectedColumnsCard columnTypes={columnTypes} />
 
-                  <div className="rounded-[2rem] border border-white bg-white/90 p-5 shadow-xl shadow-slate-200/70 backdrop-blur">
+                  <div className="rounded-4xl border border-white bg-white/90 p-5 shadow-xl shadow-slate-200/70 backdrop-blur">
                     <h3 className="mb-4 flex items-center gap-2 font-black text-slate-950">
                       <Layers className="h-5 w-5 text-blue-600" />
                       Recommended Dashboards
@@ -1312,8 +1312,8 @@ export default function Home() {
 
 function EmptyState() {
   return (
-    <div className="rounded-[2rem] border border-white bg-white/90 p-10 text-center shadow-xl shadow-slate-200/70 backdrop-blur">
-      <div className="mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-3xl bg-gradient-to-br from-blue-600 to-indigo-600 text-white shadow-xl shadow-blue-200">
+    <div className="rounded-4xl border border-white bg-white/90 p-10 text-center shadow-xl shadow-slate-200/70 backdrop-blur">
+      <div className="mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-3xl bg-linear-to-br from-blue-600 to-indigo-600 text-white shadow-xl shadow-blue-200">
         <LayoutDashboard className="h-10 w-10" />
       </div>
 
@@ -1355,7 +1355,7 @@ function MetricCard({ title, value }) {
         {value}
       </h3>
       <div className="mt-4 h-1.5 rounded-full bg-slate-100">
-        <div className="h-1.5 w-2/3 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 transition group-hover:w-full" />
+        <div className="h-1.5 w-2/3 rounded-full bg-linear-to-r from-blue-600 to-indigo-600 transition group-hover:w-full" />
       </div>
     </div>
   );
@@ -1363,7 +1363,7 @@ function MetricCard({ title, value }) {
 
 function InsightsPanel({ insights }) {
   return (
-    <div className="mb-8 rounded-[2rem] border border-white bg-white/90 p-5 shadow-xl shadow-slate-200/70 backdrop-blur">
+    <div className="mb-8 rounded-4xl border border-white bg-white/90 p-5 shadow-xl shadow-slate-200/70 backdrop-blur">
       <div className="mb-4 flex items-center gap-2">
         <Wand2 className="h-5 w-5 text-blue-600" />
         <h3 className="font-black text-slate-950">Smart Insights</h3>
@@ -1395,7 +1395,7 @@ function FilterPanel({
   clearFilters,
 }) {
   return (
-    <div className="rounded-[2rem] border border-white bg-white/90 p-5 shadow-xl shadow-slate-200/70 backdrop-blur">
+    <div className="rounded-4xl border border-white bg-white/90 p-5 shadow-xl shadow-slate-200/70 backdrop-blur">
       <div className="mb-5 flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
         <div>
           <h3 className="flex items-center gap-2 font-black text-slate-950">
@@ -1478,7 +1478,7 @@ function FilterPanel({
 
 function DetectedColumnsCard({ columnTypes }) {
   return (
-    <div className="rounded-[2rem] border border-white bg-white/90 p-5 shadow-xl shadow-slate-200/70 backdrop-blur">
+    <div className="rounded-4xl border border-white bg-white/90 p-5 shadow-xl shadow-slate-200/70 backdrop-blur">
       <h3 className="mb-4 flex items-center gap-2 font-black text-slate-950">
         <Database className="h-5 w-5 text-blue-600" />
         Detected Columns
@@ -1498,7 +1498,7 @@ function DashboardSuggestionCard({ dashboard, active, onClick }) {
       onClick={onClick}
       className={`group w-full rounded-3xl border p-4 text-left transition hover:-translate-y-0.5 ${
         active
-          ? "border-blue-500 bg-gradient-to-br from-blue-50 to-indigo-50 shadow-lg shadow-blue-100"
+          ? "border-blue-500 bg-linear-to-br from-blue-50 to-indigo-50 shadow-lg shadow-blue-100"
           : "border-slate-200 bg-white hover:border-blue-300 hover:shadow-lg hover:shadow-slate-200"
       }`}
     >
@@ -1550,7 +1550,7 @@ function CustomDashboardBuilder({
   const needsYColumn = ["bar", "horizontal-bar", "line"].includes(customChartType);
 
   return (
-    <div className="rounded-[2rem] border border-white bg-white/90 p-5 shadow-xl shadow-slate-200/70 backdrop-blur">
+    <div className="rounded-4xl border border-white bg-white/90 p-5 shadow-xl shadow-slate-200/70 backdrop-blur">
       <h3 className="mb-2 flex items-center gap-2 font-black text-slate-950">
         <LayoutDashboard className="h-5 w-5 text-blue-600" />
         Custom Builder
@@ -1656,7 +1656,7 @@ function CustomDashboardWorkspace({
 }) {
   if (!savedCharts.length) {
     return (
-      <div className="rounded-[2rem] border border-dashed border-slate-300 bg-white/80 p-8 text-center shadow-sm">
+      <div className="rounded-4xl border border-dashed border-slate-300 bg-white/80 p-8 text-center shadow-sm">
         <LayoutDashboard className="mx-auto mb-3 h-9 w-9 text-slate-400" />
         <h3 className="text-lg font-black text-slate-900">
           Custom dashboard is empty
@@ -1669,7 +1669,7 @@ function CustomDashboardWorkspace({
   }
 
   return (
-    <div className="rounded-[2rem] border border-white bg-white/90 p-6 shadow-xl shadow-slate-200/70 backdrop-blur">
+    <div className="rounded-4xl border border-white bg-white/90 p-6 shadow-xl shadow-slate-200/70 backdrop-blur">
       <div className="mb-6 flex items-center gap-3">
         <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-blue-50 text-blue-600">
           <LayoutDashboard className="h-6 w-6" />
@@ -1749,7 +1749,7 @@ function SavedChartRenderer({ chart, data }) {
 
 function DashboardCard({ title, children }) {
   return (
-    <div className="rounded-[2rem] border border-white bg-white/90 p-6 shadow-xl shadow-slate-200/70 backdrop-blur">
+    <div className="rounded-4xl border border-white bg-white/90 p-6 shadow-xl shadow-slate-200/70 backdrop-blur">
       <div className="mb-6 flex items-center gap-3">
         <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-green-50 text-green-600">
           <CheckCircle2 className="h-6 w-6" />
@@ -1774,7 +1774,7 @@ function SelectorGrid({ children }) {
 
 function InsightBox({ text }) {
   return (
-    <div className="mt-5 rounded-3xl border border-blue-100 bg-gradient-to-r from-blue-50 to-indigo-50 p-4 text-sm font-bold leading-6 text-blue-900">
+    <div className="mt-5 rounded-3xl border border-blue-100 bg-linear-to-r from-blue-50 to-indigo-50 p-4 text-sm font-bold leading-6 text-blue-900">
       <div className="flex gap-3">
         <Sparkles className="mt-0.5 h-5 w-5 shrink-0 text-blue-600" />
         <span>{text}</span>
@@ -1864,7 +1864,7 @@ function FeatureCard({ icon, title, description }) {
 
 function DataPreview({ columns, data }) {
   return (
-    <div className="rounded-[2rem] border border-white bg-white/90 p-6 shadow-xl shadow-slate-200/70 backdrop-blur">
+    <div className="rounded-4xl border border-white bg-white/90 p-6 shadow-xl shadow-slate-200/70 backdrop-blur">
       <div className="mb-5 flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
         <div>
           <h3 className="text-xl font-black text-slate-950">Data Preview</h3>
